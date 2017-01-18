@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  book
 //
-//  Created by pajia1 on 17/1/16.
+//  Created by chenxb on 17/1/16.
 //  Copyright © 2017年 grace. All rights reserved.
 //
 
@@ -19,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    _sharedInstance = self;
+    
     StartViewController *vc = [[StartViewController alloc] init];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
@@ -53,6 +56,22 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+static AppDelegate *_sharedInstance;
+
+
++(AppDelegate *)shareInstance
+{
+    @synchronized(self)
+    {
+        if (_sharedInstance == nil)
+        {
+            _sharedInstance = [[self alloc] init];
+        }
+    }
+    return _sharedInstance;
+}
+
 
 
 #pragma mark - Core Data stack

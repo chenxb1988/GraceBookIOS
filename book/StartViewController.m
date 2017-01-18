@@ -2,11 +2,13 @@
 //  StartViewController.m
 //  book
 //
-//  Created by pajia1 on 17/1/16.
+//  Created by chenxb on 17/1/16.
 //  Copyright © 2017年 grace. All rights reserved.
 //
 
 #import "StartViewController.h"
+#import "PYTabBarController.h"
+#import "AppDelegate.h"
 #import "Commons.h"
 
 
@@ -27,7 +29,17 @@
     self.top_imageView.clipsToBounds = YES;
     self.top_imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.start_imageView addSubview:self.top_imageView];
+    
+    [self performSelector:@selector(switchToMain) withObject:nil afterDelay:3.0];
+//    [self switchToMain];
 
+}
+
+- (void) switchToMain
+{
+    PYTabBarController *nav = [[PYTabBarController alloc] init];
+    [AppDelegate shareInstance].window.rootViewController = nav;
+    [[AppDelegate shareInstance].window makeKeyAndVisible];
 }
 
 
