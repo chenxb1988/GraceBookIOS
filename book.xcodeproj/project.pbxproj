@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		079257E81E2F75A5006DFE02 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257E71E2F75A5006DFE02 /* HomeViewController.m */; };
+		079257EB1E2F75B9006DFE02 /* MallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257EA1E2F75B9006DFE02 /* MallViewController.m */; };
+		079257EE1E2F75C7006DFE02 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257ED1E2F75C7006DFE02 /* ContactViewController.m */; };
+		079257F11E2F7604006DFE02 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F01E2F7604006DFE02 /* RecordViewController.m */; };
+		079257F41E2F7611006DFE02 /* SelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F31E2F7611006DFE02 /* SelfViewController.m */; };
 		1914F0621E2CDF2E004668EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914F0611E2CDF2E004668EF /* main.m */; };
 		1914F0651E2CDF2E004668EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914F0641E2CDF2E004668EF /* AppDelegate.m */; };
 		1914F06B1E2CDF2E004668EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1914F0691E2CDF2E004668EF /* Main.storyboard */; };
@@ -44,6 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		079257E61E2F75A5006DFE02 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		079257E71E2F75A5006DFE02 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		079257E91E2F75B9006DFE02 /* MallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallViewController.h; sourceTree = "<group>"; };
+		079257EA1E2F75B9006DFE02 /* MallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallViewController.m; sourceTree = "<group>"; };
+		079257EC1E2F75C7006DFE02 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		079257ED1E2F75C7006DFE02 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		079257EF1E2F7604006DFE02 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		079257F01E2F7604006DFE02 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		079257F21E2F7611006DFE02 /* SelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfViewController.h; sourceTree = "<group>"; };
+		079257F31E2F7611006DFE02 /* SelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfViewController.m; sourceTree = "<group>"; };
 		1914F05D1E2CDF2E004668EF /* book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1914F0611E2CDF2E004668EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1914F0631E2CDF2E004668EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +118,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		079257E51E2F757A006DFE02 /* mainpage */ = {
+			isa = PBXGroup;
+			children = (
+				079257E61E2F75A5006DFE02 /* HomeViewController.h */,
+				079257E71E2F75A5006DFE02 /* HomeViewController.m */,
+				079257E91E2F75B9006DFE02 /* MallViewController.h */,
+				079257EA1E2F75B9006DFE02 /* MallViewController.m */,
+				079257EC1E2F75C7006DFE02 /* ContactViewController.h */,
+				079257ED1E2F75C7006DFE02 /* ContactViewController.m */,
+				079257EF1E2F7604006DFE02 /* RecordViewController.h */,
+				079257F01E2F7604006DFE02 /* RecordViewController.m */,
+				079257F21E2F7611006DFE02 /* SelfViewController.h */,
+				079257F31E2F7611006DFE02 /* SelfViewController.m */,
+			);
+			name = mainpage;
+			sourceTree = "<group>";
+		};
 		1914F0541E2CDF2E004668EF = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +158,7 @@
 		1914F05F1E2CDF2E004668EF /* book */ = {
 			isa = PBXGroup;
 			children = (
+				079257E51E2F757A006DFE02 /* mainpage */,
 				198554711E2DF5EF0039AE51 /* theme */,
 				1914F09D1E2CE621004668EF /* asset */,
 				1914F0991E2CE427004668EF /* util */,
@@ -342,17 +375,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079257EB1E2F75B9006DFE02 /* MallViewController.m in Sources */,
 				198554801E2DFA690039AE51 /* PYNavigationController.m in Sources */,
 				1914F06E1E2CDF2E004668EF /* book.xcdatamodeld in Sources */,
 				198554741E2DF61D0039AE51 /* NSObject+PYThemeExtension.m in Sources */,
 				1914F0981E2CE264004668EF /* StartViewController.m in Sources */,
 				198554821E2DFA690039AE51 /* PYTabBarController.m in Sources */,
 				1914F0651E2CDF2E004668EF /* AppDelegate.m in Sources */,
+				079257EE1E2F75C7006DFE02 /* ContactViewController.m in Sources */,
+				079257F41E2F7611006DFE02 /* SelfViewController.m in Sources */,
 				1914F09C1E2CE43E004668EF /* Commons.m in Sources */,
+				079257F11E2F7604006DFE02 /* RecordViewController.m in Sources */,
 				198554831E2DFA690039AE51 /* PYTempCollectionViewController.m in Sources */,
 				198554771E2DF6C60039AE51 /* UIView+PYExtension.m in Sources */,
 				1914F0621E2CDF2E004668EF /* main.m in Sources */,
 				198554811E2DFA690039AE51 /* PYTabBar.m in Sources */,
+				079257E81E2F75A5006DFE02 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

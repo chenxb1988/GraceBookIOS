@@ -12,6 +12,12 @@
 #import "NSObject+PYThemeExtension.h"
 #import "PYTabBar.h"
 
+#import "HomeViewController.h"
+#import "MallViewController.h"
+#import "RecordViewController.h"
+#import "ContactViewController.h"
+#import "SelfViewController.h"
+
 @interface PYTabBarController ()
 
 
@@ -22,16 +28,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    PYTabBar *tabBar = [PYTabBar tabBar];
-    // 设置自定义tabBar(使用kvc)
-    [self setValue:tabBar forKeyPath:@"tabBar"];
+//    PYTabBar *tabBar = [PYTabBar tabBar];
+//    // 设置自定义tabBar(使用kvc)
+//    [self setValue:tabBar forKeyPath:@"tabBar"];
    
     // 首页
-    [self addChildViewController:[[PYTempCollectionViewController alloc] init] image:@"tab_home_nor" seletedImage:@"tab_home_press" title:@"Home"];
-    [self addChildViewController:[[PYTempCollectionViewController alloc] init] image:@"tab_classify_nor"  seletedImage:@"tab_classify_press"  title:@"Classify"];
-    [self addChildViewController:[[PYTempCollectionViewController alloc] init] image:@"tab_community_nor"  seletedImage:@"tab_community_press"  title:@"Community"];
-    [self addChildViewController:[[PYTempCollectionViewController alloc] init] image:@"tab_me_nor"  seletedImage:@"tab_me_press"  title:@"Me"];
-    NSLog(@"PYTabBarController viewDidLoad");
+    [self addChildViewController:[[MallViewController alloc] init] image:@"tab_home_nor" seletedImage:@"tab_home_press" title:@"Home"];
+    [self addChildViewController:[[RecordViewController alloc] init] image:@"tab_classify_nor"  seletedImage:@"tab_classify_press"  title:@"Classify"];
+    [self addChildViewController:[[HomeViewController alloc] init] image:@"tab_publish_nor" seletedImage:@"tab_publish_nor" title:nil];
+    [self addChildViewController:[[ContactViewController alloc] init] image:@"tab_community_nor"  seletedImage:@"tab_community_press"  title:@"Community"];
+    [self addChildViewController:[[SelfViewController alloc] init] image:@"tab_me_nor"  seletedImage:@"tab_me_press"  title:@"Me"];
 }
 
 - (UIViewController *)addChildViewController:(UIViewController *)childController image:(NSString *)image seletedImage:(NSString *)selectedImage title:(NSString *)title

@@ -30,7 +30,7 @@
     self.top_imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.start_imageView addSubview:self.top_imageView];
     
-    [self performSelector:@selector(switchToMain) withObject:nil afterDelay:3.0];
+    [self performSelector:@selector(switchToMain) withObject:nil afterDelay:1.0];
 //    [self switchToMain];
 
 }
