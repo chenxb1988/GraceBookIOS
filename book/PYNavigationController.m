@@ -8,7 +8,6 @@
 
 
 #import "PYNavigationController.h"
-#import "NSObject+PYThemeExtension.h"
 
 @implementation PYNavigationController
 
@@ -18,7 +17,6 @@
         // 设置主题颜色
         UINavigationBar *navBar = [[UINavigationBar alloc] init];
         // 设置背景颜色
-        [navBar py_addToThemeColorPool:@"barTintColor"];
         navBar.tintColor = [UIColor whiteColor];
         // 设置字体颜色
         NSDictionary *attr = @{ NSForegroundColorAttributeName : [UIColor whiteColor],

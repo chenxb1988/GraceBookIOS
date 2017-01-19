@@ -8,9 +8,7 @@
 
 #import "PYTabBarController.h"
 #import "PYNavigationController.h"
-#import "PYTempCollectionViewController.h"
-#import "NSObject+PYThemeExtension.h"
-#import "PYTabBar.h"
+#import "PYTempCollectionViewController.h"#import "PYTabBar.h"
 
 #import "HomeViewController.h"
 #import "MallViewController.h"
@@ -48,9 +46,6 @@
     NSMutableDictionary *attrNol = [NSMutableDictionary dictionary];
     attrNol[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
     [childController.tabBarItem setTitleTextAttributes:attrNol forState:UIControlStateNormal];
-    NSMutableDictionary *attrSel = [NSMutableDictionary dictionary];
-    attrSel[NSForegroundColorAttributeName] = PYTHEME_THEME_COLOR;
-    [childController.tabBarItem py_addToThemeColorPoolWithSelector:@selector(setTitleTextAttributes:forState:) objects:@[attrSel, @(UIControlStateSelected)]];
     // 设置图片
     [childController.tabBarItem setImage:[[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [childController.tabBarItem setSelectedImage:[[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];

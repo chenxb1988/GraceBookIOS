@@ -8,8 +8,8 @@
 
 
 #import "PYTempCollectionViewController.h"
-#import "NSObject+PYThemeExtension.h"
 #import "UIView+PYExtension.h"
+#import "Commons.h"
 
 // 颜色
 #define PYTHEME_COLOR(r,g,b) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1.0]
@@ -71,7 +71,10 @@ static NSString * const reuseIdentifier = @"Cell";
     // 取出cell
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     // 设置主题色
-    [self py_setThemeColor:cell.backgroundColor];
+//    [self py_setThemeColor:cell.backgroundColor];
+    [[NSNotificationCenter defaultCenter] postNotificationName:ThemeDidChangeNotification object:cell.backgroundColor];
+    
+    [self dismissModalViewControllerAnimated:true];
 }
 
 @end

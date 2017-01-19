@@ -18,5 +18,6 @@
 #define YQ_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define YQ_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
+#define ThemeDidChangeNotification @"ThemeDidChangeNotification"
 
 @end

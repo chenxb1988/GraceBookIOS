@@ -9,7 +9,6 @@
 
 #import "PYTabBar.h"
 #import "UIView+PYExtension.h"
-#import "NSObject+PYThemeExtension.h"
 #define  PYControllCount 4
 @interface PYTabBar ()
 @property (nonatomic, strong) UIView *plusBtn;
@@ -30,7 +29,6 @@
         [plusBtn addTarget:self action:@selector(plusClick) forControlEvents:UIControlEventTouchUpInside];
         self.plusBtn = plusBtn;
         [self addSubview:plusBtn];
-        [self py_addToThemeColorPool:@"tintColor"];
     }
     return self;
 }

@@ -7,7 +7,10 @@
 //
 
 #import "SelfViewController.h"
+#import "PYTempCollectionViewController.h"
 #import "Commons.h"
+#import "ColorUtil.h"
+#import "ColorBackButton.h"
 
 @interface SelfViewController ()
 
@@ -24,12 +27,22 @@
     [text setText:@"SelfViewController"];
     text.frame= CGRectMake(0, 0, ScreenWidth, ScreenHeight/3);
     [self.view addSubview:text];
-
+    
+    ColorBackButton *btn = [[ColorBackButton alloc] initWithFrame:CGRectMake(140, 100, 100, 50)];
+    [btn setBackgroundImage:[ColorUtil createImageWithColor:[UIColor greenColor]] forState:UIControlStateNormal];
+    [btn setTitle:@"click" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(gotoChangeTheme) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)gotoChangeTheme {
+    PYTempCollectionViewController *vc = [[PYTempCollectionViewController alloc] init];
+    [self presentModalViewController:vc animated:YES];
 }
 
 /*

@@ -7,6 +7,7 @@
 //
 
 #import "UIView+PYExtension.h"
+#import "Commons.h"
 
 @implementation UIView (PYExtension)
 
@@ -157,4 +158,22 @@
     };
     return [self py_setAnchorPoint:anchorPoint forView:self];
 }
+
+
+-(void)addNotification{
+    if (self) {
+        [[NSNotificationCenter defaultCenter]
+         addObserver:self
+         selector:@selector(themeNotification:)
+         name:ThemeDidChangeNotification object:nil];
+    }
+}
+
+- (void)themeNotification:(NSNotification *)notification {
+    if(notification.object && [notification.object isKindOfClass:[UIColor class]]){
+        UIColor *color = notification.object;
+        [self changeTheme:color];
+    }
+}
+
 @end
