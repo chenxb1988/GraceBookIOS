@@ -13,4 +13,8 @@
 
 + (UIImage*) createImageWithColor: (UIColor*) color;
 
++ (void) saveThemeColor: (UIColor*) color;
+
++ (UIColor*) getThemeColor;
+
 @end

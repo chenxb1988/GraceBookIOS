@@ -7,6 +7,7 @@
 //
 
 #import "ColorUtil.h"
+#import "Commons.h"
 
 @implementation ColorUtil
 
@@ -20,5 +21,29 @@
     UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return theImage;
+}
+
++ (void) saveThemeColor: (UIColor*) color
+{
+    CGColorRef textColorRef = color.CGColor;
+    NSString *textColorStr = [CIColor colorWithCGColor:textColorRef].stringRepresentation;
+    [UserDefault setObject:textColorStr forKey:THEME_COLOR];
+}
+
++ (UIColor*) getThemeColor
+{
+    NSString *colorStr = [UserDefault objectForKey:THEME_COLOR];
+    if(!colorStr){
+        return [UIColor blueColor];
+    }
+    
+    NSArray *colorArray = [colorStr componentsSeparatedByString:@" "];
+    CGFloat red = [[colorArray objectAtIndex:0] floatValue];
+    CGFloat green = [[colorArray objectAtIndex:1] floatValue];
+    CGFloat blue = [[colorArray objectAtIndex:2] floatValue];
+    CGFloat alpha = [[colorArray objectAtIndex:3] floatValue];
+    
+    UIColor *color = [[UIColor alloc]initWithRed:red green:green blue:blue alpha:alpha];
+    return color;
 }
 @end

@@ -19,5 +19,8 @@
 #define YQ_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 #define ThemeDidChangeNotification @"ThemeDidChangeNotification"
+#define THEME_COLOR @"theme_color"
+
+#define UserDefault [NSUserDefaults standardUserDefaults]
 
 @end

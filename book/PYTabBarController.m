@@ -7,14 +7,15 @@
 //
 
 #import "PYTabBarController.h"
-#import "PYNavigationController.h"
-#import "PYTempCollectionViewController.h"#import "PYTabBar.h"
-
+#import "PYTempCollectionViewController.h"
 #import "HomeViewController.h"
 #import "MallViewController.h"
 #import "RecordViewController.h"
 #import "ContactViewController.h"
 #import "SelfViewController.h"
+#import "Commons.h"
+#import "UIViewController+PYExtension.h"
+#import "ColorUtil.h"
 
 @interface PYTabBarController ()
 
@@ -26,35 +27,64 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    PYTabBar *tabBar = [PYTabBar tabBar];
-//    // 设置自定义tabBar(使用kvc)
-//    [self setValue:tabBar forKeyPath:@"tabBar"];
-   
     // 首页
-    [self addChildViewController:[[MallViewController alloc] init] image:@"tab_home_nor" seletedImage:@"tab_home_press" title:@"Home"];
-    [self addChildViewController:[[RecordViewController alloc] init] image:@"tab_classify_nor"  seletedImage:@"tab_classify_press"  title:@"Classify"];
-    [self addChildViewController:[[HomeViewController alloc] init] image:@"tab_publish_nor" seletedImage:@"tab_publish_nor" title:nil];
-    [self addChildViewController:[[ContactViewController alloc] init] image:@"tab_community_nor"  seletedImage:@"tab_community_press"  title:@"Community"];
-    [self addChildViewController:[[SelfViewController alloc] init] image:@"tab_me_nor"  seletedImage:@"tab_me_press"  title:@"Me"];
+    _homeViewController = [[HomeViewController alloc] init];
+    _mallViewController = [[MallViewController alloc] init];
+    _recordViewController = [[RecordViewController alloc] init];
+    _contactViewController = [[ContactViewController alloc] init];
+    _selfViewController = [[SelfViewController alloc] init];
+    [self addChildViewController:_mallViewController image:@"tab_home_nor" seletedImage:@"tab_home_press" title:@"Home"];
+    [self addChildViewController:_recordViewController image:@"tab_classify_nor"  seletedImage:@"tab_classify_press"  title:@"Classify"];
+    [self addChildViewController:_homeViewController image:@"tab_publish_nor" seletedImage:@"tab_publish_nor" title:nil];
+    [self addChildViewController:_contactViewController image:@"tab_community_nor"  seletedImage:@"tab_community_press"  title:@"Community"];
+    [self addChildViewController:_selfViewController image:@"tab_me_nor"  seletedImage:@"tab_me_press"  title:@"Me"];
+    
+    [self addNotification];
+    
+    [self changeTheme:[ColorUtil getThemeColor]];
 }
 
 - (UIViewController *)addChildViewController:(UIViewController *)childController image:(NSString *)image seletedImage:(NSString *)selectedImage title:(NSString *)title
 {
     // 设置标题
     childController.title = title;
+
     // 设置字体颜色
     NSMutableDictionary *attrNol = [NSMutableDictionary dictionary];
     attrNol[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
     [childController.tabBarItem setTitleTextAttributes:attrNol forState:UIControlStateNormal];
+    
     // 设置图片
     [childController.tabBarItem setImage:[[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [childController.tabBarItem setSelectedImage:[[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-
+    
     // 包装导航条
-    PYNavigationController *nav = [[PYNavigationController alloc] initWithRootViewController:childController];
+    _navigationController = [[PYNavigationController alloc] initWithRootViewController:childController];
     // 添加子控制器
-    [self addChildViewController:nav];
+    [self addChildViewController:_navigationController];
+    
     return childController;
 }
+
+
+
+- (void) changeTheme:(UIColor*) color{
+    NSMutableDictionary *attrNol = [NSMutableDictionary dictionary];
+    attrNol[NSForegroundColorAttributeName] = color;
+    
+    [_homeViewController.tabBarItem setTitleTextAttributes:attrNol forState:UIControlStateSelected];
+    [_mallViewController.tabBarItem setTitleTextAttributes:attrNol forState:UIControlStateSelected];
+    [_recordViewController.tabBarItem setTitleTextAttributes:attrNol forState:UIControlStateSelected];
+    [_contactViewController.tabBarItem setTitleTextAttributes:attrNol forState:UIControlStateSelected];
+    [_selfViewController.tabBarItem setTitleTextAttributes:attrNol forState:UIControlStateSelected];
+    
+    [_homeViewController.navigationController.navigationBar setBarTintColor:color];
+    [_mallViewController.navigationController.navigationBar setBarTintColor:color];
+    [_recordViewController.navigationController.navigationBar setBarTintColor:color];
+    [_contactViewController.navigationController.navigationBar setBarTintColor:color];
+    [_selfViewController.navigationController.navigationBar setBarTintColor:color];
+    self.tabBar.tintColor = color;
+}
+
 
 @end

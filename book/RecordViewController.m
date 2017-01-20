@@ -8,6 +8,8 @@
 
 #import "RecordViewController.h"
 #import "Commons.h"
+#import "ColorLabel.h"
+#import "ColorUtil.h"
 
 @interface RecordViewController ()
 
@@ -19,8 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    UITextView *text = [[UITextView alloc]init];
-    text.textColor = [UIColor redColor];
+    ColorLabel *text = [[ColorLabel alloc]init];
+    text.textColor = [ColorUtil getThemeColor];
     [text setText:@"RecordViewController"];
     text.frame= CGRectMake(0, 0, ScreenWidth, ScreenHeight/3);
     [self.view addSubview:text];

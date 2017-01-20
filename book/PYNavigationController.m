@@ -8,6 +8,7 @@
 
 
 #import "PYNavigationController.h"
+#import "ColorUtil.h"
 
 @implementation PYNavigationController
 
@@ -17,12 +18,13 @@
         // 设置主题颜色
         UINavigationBar *navBar = [[UINavigationBar alloc] init];
         // 设置背景颜色
-        navBar.tintColor = [UIColor whiteColor];
+        navBar.tintColor = [ColorUtil getThemeColor];
         // 设置字体颜色
         NSDictionary *attr = @{ NSForegroundColorAttributeName : [UIColor whiteColor],
                                 NSFontAttributeName : [UIFont boldSystemFontOfSize:20]
                                 };
         navBar.titleTextAttributes = attr;
+        
         [self setValue:navBar forKey:@"navigationBar"];
     }
    

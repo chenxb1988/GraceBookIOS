@@ -8,7 +8,15 @@
 
 
 #import <UIKit/UIKit.h>
+#import "PYNavigationController.h"
 
 @interface PYTabBarController : UITabBarController
+
+@property (nonatomic, retain) UIViewController *homeViewController;
+@property (nonatomic, retain) UIViewController *mallViewController;
+@property (nonatomic, retain) UIViewController *recordViewController;
+@property (nonatomic, retain) UIViewController *contactViewController;
+@property (nonatomic, retain) UIViewController *selfViewController;
+@property (nonatomic, retain) PYNavigationController *navigationController;
 
 @end

@@ -14,6 +14,8 @@
 		079257F41E2F7611006DFE02 /* SelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F31E2F7611006DFE02 /* SelfViewController.m */; };
 		079993141E30A8DB007F2B74 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 079993131E30A8DB007F2B74 /* ColorUtil.m */; };
 		079993281E30C2F6007F2B74 /* ColorBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 079993271E30C2F6007F2B74 /* ColorBackButton.m */; };
+		07CF3FB51E31C516006C9606 /* ColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CF3FB41E31C516006C9606 /* ColorLabel.m */; };
+		07CF3FB81E31F6A9006C9606 /* UIViewController+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CF3FB71E31F6A9006C9606 /* UIViewController+PYExtension.m */; };
 		1914F0621E2CDF2E004668EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914F0611E2CDF2E004668EF /* main.m */; };
 		1914F0651E2CDF2E004668EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914F0641E2CDF2E004668EF /* AppDelegate.m */; };
 		1914F06B1E2CDF2E004668EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1914F0691E2CDF2E004668EF /* Main.storyboard */; };
@@ -27,7 +29,6 @@
 		198554641E2DEC550039AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198554631E2DEC550039AE51 /* Assets.xcassets */; };
 		198554771E2DF6C60039AE51 /* UIView+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 198554761E2DF6C60039AE51 /* UIView+PYExtension.m */; };
 		198554801E2DFA690039AE51 /* PYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198554791E2DFA690039AE51 /* PYNavigationController.m */; };
-		198554811E2DFA690039AE51 /* PYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1985547B1E2DFA690039AE51 /* PYTabBar.m */; };
 		198554821E2DFA690039AE51 /* PYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1985547D1E2DFA690039AE51 /* PYTabBarController.m */; };
 		198554831E2DFA690039AE51 /* PYTempCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1985547F1E2DFA690039AE51 /* PYTempCollectionViewController.m */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,10 @@
 		079993131E30A8DB007F2B74 /* ColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
 		079993261E30C2F6007F2B74 /* ColorBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorBackButton.h; sourceTree = "<group>"; };
 		079993271E30C2F6007F2B74 /* ColorBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorBackButton.m; sourceTree = "<group>"; };
+		07CF3FB31E31C516006C9606 /* ColorLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabel.h; sourceTree = "<group>"; };
+		07CF3FB41E31C516006C9606 /* ColorLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabel.m; sourceTree = "<group>"; };
+		07CF3FB61E31F6A9006C9606 /* UIViewController+PYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PYExtension.h"; sourceTree = "<group>"; };
+		07CF3FB71E31F6A9006C9606 /* UIViewController+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PYExtension.m"; sourceTree = "<group>"; };
 		1914F05D1E2CDF2E004668EF /* book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1914F0611E2CDF2E004668EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1914F0631E2CDF2E004668EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,8 +93,6 @@
 		198554761E2DF6C60039AE51 /* UIView+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYExtension.m"; sourceTree = "<group>"; };
 		198554781E2DFA680039AE51 /* PYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYNavigationController.h; sourceTree = "<group>"; };
 		198554791E2DFA690039AE51 /* PYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYNavigationController.m; sourceTree = "<group>"; };
-		1985547A1E2DFA690039AE51 /* PYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYTabBar.h; sourceTree = "<group>"; };
-		1985547B1E2DFA690039AE51 /* PYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYTabBar.m; sourceTree = "<group>"; };
 		1985547C1E2DFA690039AE51 /* PYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYTabBarController.h; sourceTree = "<group>"; };
 		1985547D1E2DFA690039AE51 /* PYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYTabBarController.m; sourceTree = "<group>"; };
 		1985547E1E2DFA690039AE51 /* PYTempCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYTempCollectionViewController.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 			children = (
 				198554751E2DF6C60039AE51 /* UIView+PYExtension.h */,
 				198554761E2DF6C60039AE51 /* UIView+PYExtension.m */,
+				07CF3FB61E31F6A9006C9606 /* UIViewController+PYExtension.h */,
+				07CF3FB71E31F6A9006C9606 /* UIViewController+PYExtension.m */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -181,8 +186,6 @@
 				1914F0971E2CE264004668EF /* StartViewController.m */,
 				198554781E2DFA680039AE51 /* PYNavigationController.h */,
 				198554791E2DFA690039AE51 /* PYNavigationController.m */,
-				1985547A1E2DFA690039AE51 /* PYTabBar.h */,
-				1985547B1E2DFA690039AE51 /* PYTabBar.m */,
 				1985547C1E2DFA690039AE51 /* PYTabBarController.h */,
 				1985547D1E2DFA690039AE51 /* PYTabBarController.m */,
 				1985547E1E2DFA690039AE51 /* PYTempCollectionViewController.h */,
@@ -247,6 +250,8 @@
 			children = (
 				079993261E30C2F6007F2B74 /* ColorBackButton.h */,
 				079993271E30C2F6007F2B74 /* ColorBackButton.m */,
+				07CF3FB31E31C516006C9606 /* ColorLabel.h */,
+				07CF3FB41E31C516006C9606 /* ColorLabel.m */,
 			);
 			name = theme;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				079257EB1E2F75B9006DFE02 /* MallViewController.m in Sources */,
 				198554801E2DFA690039AE51 /* PYNavigationController.m in Sources */,
 				1914F06E1E2CDF2E004668EF /* book.xcdatamodeld in Sources */,
+				07CF3FB51E31C516006C9606 /* ColorLabel.m in Sources */,
 				1914F0981E2CE264004668EF /* StartViewController.m in Sources */,
 				198554821E2DFA690039AE51 /* PYTabBarController.m in Sources */,
 				1914F0651E2CDF2E004668EF /* AppDelegate.m in Sources */,
@@ -402,8 +408,8 @@
 				198554831E2DFA690039AE51 /* PYTempCollectionViewController.m in Sources */,
 				079993281E30C2F6007F2B74 /* ColorBackButton.m in Sources */,
 				198554771E2DF6C60039AE51 /* UIView+PYExtension.m in Sources */,
+				07CF3FB81E31F6A9006C9606 /* UIViewController+PYExtension.m in Sources */,
 				1914F0621E2CDF2E004668EF /* main.m in Sources */,
-				198554811E2DFA690039AE51 /* PYTabBar.m in Sources */,
 				079257E81E2F75A5006DFE02 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

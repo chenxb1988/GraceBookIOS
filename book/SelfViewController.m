@@ -11,6 +11,7 @@
 #import "Commons.h"
 #import "ColorUtil.h"
 #import "ColorBackButton.h"
+#import "ColorLabel.h"
 
 @interface SelfViewController ()
 
@@ -22,17 +23,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    UITextView *text = [[UITextView alloc]init];
-    text.textColor = [UIColor redColor];
+    ColorLabel *text = [[ColorLabel alloc]init];
+    text.textColor = [ColorUtil getThemeColor];
     [text setText:@"SelfViewController"];
     text.frame= CGRectMake(0, 0, ScreenWidth, ScreenHeight/3);
     [self.view addSubview:text];
     
-    ColorBackButton *btn = [[ColorBackButton alloc] initWithFrame:CGRectMake(140, 100, 100, 50)];
-    [btn setBackgroundImage:[ColorUtil createImageWithColor:[UIColor greenColor]] forState:UIControlStateNormal];
+    ColorBackButton *btn = [[ColorBackButton alloc] initWithFrame:CGRectMake(140, 300, 100, 50)];
+    [btn setBackgroundImage:[ColorUtil createImageWithColor:[ColorUtil getThemeColor]] forState:UIControlStateNormal];
     [btn setTitle:@"click" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(gotoChangeTheme) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
 }
 
 - (void)didReceiveMemoryWarning {
