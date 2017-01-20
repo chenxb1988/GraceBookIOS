@@ -16,6 +16,7 @@
 		079993281E30C2F6007F2B74 /* ColorBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 079993271E30C2F6007F2B74 /* ColorBackButton.m */; };
 		07CF3FB51E31C516006C9606 /* ColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CF3FB41E31C516006C9606 /* ColorLabel.m */; };
 		07CF3FB81E31F6A9006C9606 /* UIViewController+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CF3FB71E31F6A9006C9606 /* UIViewController+PYExtension.m */; };
+		07CF3FBE1E3239DB006C9606 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CF3FBD1E3239DB006C9606 /* AFNetworking.framework */; };
 		1914F0621E2CDF2E004668EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914F0611E2CDF2E004668EF /* main.m */; };
 		1914F0651E2CDF2E004668EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914F0641E2CDF2E004668EF /* AppDelegate.m */; };
 		1914F06B1E2CDF2E004668EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1914F0691E2CDF2E004668EF /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		07CF3FB41E31C516006C9606 /* ColorLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabel.m; sourceTree = "<group>"; };
 		07CF3FB61E31F6A9006C9606 /* UIViewController+PYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PYExtension.h"; sourceTree = "<group>"; };
 		07CF3FB71E31F6A9006C9606 /* UIViewController+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PYExtension.m"; sourceTree = "<group>"; };
+		07CF3FBD1E3239DB006C9606 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 		1914F05D1E2CDF2E004668EF /* book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1914F0611E2CDF2E004668EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1914F0631E2CDF2E004668EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CF3FBE1E3239DB006C9606 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +155,14 @@
 			name = extension;
 			sourceTree = "<group>";
 		};
+		07CF3FBC1E3239DB006C9606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07CF3FBD1E3239DB006C9606 /* AFNetworking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1914F0541E2CDF2E004668EF = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +170,7 @@
 				1914F07C1E2CDF2F004668EF /* bookTests */,
 				1914F0871E2CDF2F004668EF /* bookUITests */,
 				1914F05E1E2CDF2E004668EF /* Products */,
+				07CF3FBC1E3239DB006C9606 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +278,7 @@
 				1914F0591E2CDF2E004668EF /* Sources */,
 				1914F05A1E2CDF2E004668EF /* Frameworks */,
 				1914F05B1E2CDF2E004668EF /* Resources */,
+				07CF3FBB1E3237B4006C9606 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -387,6 +400,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07CF3FBB1E3237B4006C9606 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1914F0591E2CDF2E004668EF /* Sources */ = {
@@ -560,6 +590,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V2RS2QG2P5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = book/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -573,6 +607,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V2RS2QG2P5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = book/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
