@@ -13,6 +13,7 @@
 #import "ColorBackButton.h"
 #import "ColorLabel.h"
 #import "AFNetworkUtil.h"
+#import "Preload.h"
 
 @interface SelfViewController ()
 
@@ -36,22 +37,29 @@
     [btn addTarget:self action:@selector(gotoChangeTheme) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
-    [[AFNetworkUtil getManager] POST:@"http://newtest.yiqi1717.com:9000/preload"
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"application/x-javascript", nil];
+
+    [manager GET:@"http://newtest.yiqi1717.com:9000/preload"
       parameters:@{
                      @"channel_id":@"1",
                      @"ver":@"20151111"
                   }
+      progress:nil
     success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
-//        NSError *error ;
-//        id data = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:&error];
-//        if (data != nil && error == nil && [data isKindOfClass:[NSDictionary class]])
-//        {
-//            //
-//            self.mPreloadData = data;
-//            withCallback(data);
-//            return ;
-//        }
+        __weak __typeof(responseObject) weakObj = responseObject;
+        @try {
+            NSString *str = weakObj;
+            NSError *error;
+            Preload *preload = [[Preload alloc] initWithString:str error:&error];
+            int ret = preload.ret;
+        } @catch (NSException *exception) {
+            NSLog(@"");
+        }
+
 
         
         
