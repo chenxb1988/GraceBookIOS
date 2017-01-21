@@ -24,7 +24,7 @@
     ColorLabel *text = [[ColorLabel alloc]init];
     text.textColor = [ColorUtil getThemeColor];
     [text setText:@"MallViewController"];
-    text.frame= CGRectMake(0, 0, ScreenWidth, ScreenHeight/3);
+    text.frame= CGRectMake(50, 100, 300, 50);
     [self.view addSubview:text];
 }
 

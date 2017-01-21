@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		079256CA1E33308C001109E8 /* AFNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 079256C91E33308C001109E8 /* AFNetworkUtil.m */; };
 		079257E81E2F75A5006DFE02 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257E71E2F75A5006DFE02 /* HomeViewController.m */; };
 		079257EB1E2F75B9006DFE02 /* MallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257EA1E2F75B9006DFE02 /* MallViewController.m */; };
 		079257EE1E2F75C7006DFE02 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257ED1E2F75C7006DFE02 /* ContactViewController.m */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		079256C81E33308C001109E8 /* AFNetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkUtil.h; sourceTree = "<group>"; };
+		079256C91E33308C001109E8 /* AFNetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkUtil.m; sourceTree = "<group>"; };
 		079257E61E2F75A5006DFE02 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		079257E71E2F75A5006DFE02 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		079257E91E2F75B9006DFE02 /* MallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallViewController.h; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				1914F09B1E2CE43E004668EF /* Commons.m */,
 				079993121E30A8DB007F2B74 /* ColorUtil.h */,
 				079993131E30A8DB007F2B74 /* ColorUtil.m */,
+				079256C81E33308C001109E8 /* AFNetworkUtil.h */,
+				079256C91E33308C001109E8 /* AFNetworkUtil.m */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -336,7 +341,7 @@
 				TargetAttributes = {
 					1914F05C1E2CDF2E004668EF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = V2RS2QG2P5;
+						DevelopmentTeam = 7QC6SCKMRE;
 						ProvisioningStyle = Automatic;
 					};
 					1914F0781E2CDF2F004668EF = {
@@ -433,6 +438,7 @@
 				079257EE1E2F75C7006DFE02 /* ContactViewController.m in Sources */,
 				079993141E30A8DB007F2B74 /* ColorUtil.m in Sources */,
 				079257F41E2F7611006DFE02 /* SelfViewController.m in Sources */,
+				079256CA1E33308C001109E8 /* AFNetworkUtil.m in Sources */,
 				1914F09C1E2CE43E004668EF /* Commons.m in Sources */,
 				079257F11E2F7604006DFE02 /* RecordViewController.m in Sources */,
 				198554831E2DFA690039AE51 /* PYTempCollectionViewController.m in Sources */,
@@ -589,7 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V2RS2QG2P5;
+				DEVELOPMENT_TEAM = 7QC6SCKMRE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -606,7 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V2RS2QG2P5;
+				DEVELOPMENT_TEAM = 7QC6SCKMRE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

@@ -12,7 +12,7 @@
 #import "ColorUtil.h"
 #import "ColorBackButton.h"
 #import "ColorLabel.h"
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworkUtil.h"
 
 @interface SelfViewController ()
 
@@ -27,7 +27,7 @@
     ColorLabel *text = [[ColorLabel alloc]init];
     text.textColor = [ColorUtil getThemeColor];
     [text setText:@"SelfViewController"];
-    text.frame= CGRectMake(0, 0, ScreenWidth, ScreenHeight/3);
+    text.frame= CGRectMake(50, 100, 300, 50);
     [self.view addSubview:text];
     
     ColorBackButton *btn = [[ColorBackButton alloc] initWithFrame:CGRectMake(140, 300, 100, 50)];
@@ -36,18 +36,25 @@
     [btn addTarget:self action:@selector(gotoChangeTheme) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
-    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    [manager GET:@"http://newtest.yiqi1717.com:9000/preload"
+    [[AFNetworkUtil getManager] POST:@"http://newtest.yiqi1717.com:9000/preload"
       parameters:@{
                      @"channel_id":@"1",
                      @"ver":@"20151111"
                   }
-        progress:nil
     success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
+//        NSError *error ;
+//        id data = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:&error];
+//        if (data != nil && error == nil && [data isKindOfClass:[NSDictionary class]])
+//        {
+//            //
+//            self.mPreloadData = data;
+//            withCallback(data);
+//            return ;
+//        }
+
+        
+        
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
