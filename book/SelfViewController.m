@@ -49,20 +49,8 @@
                   }
       progress:nil
     success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        __weak __typeof(responseObject) weakObj = responseObject;
-        @try {
-            NSString *str = weakObj;
-            NSError *error;
-            Preload *preload = [[Preload alloc] initWithString:str error:&error];
-            int ret = preload.ret;
-        } @catch (NSException *exception) {
-            NSLog(@"");
-        }
-
-
-        
-        
+        Preload *preload = [[Preload alloc] initWithJsonObject:responseObject error:nil];
+        int ret = preload.ret;
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];

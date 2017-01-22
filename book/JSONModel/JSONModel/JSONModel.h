@@ -139,6 +139,8 @@ DEPRECATED_ATTRIBUTE
  */
 - (instancetype)initWithString:(NSString *)string error:(JSONModelError **)err;
 
+-(id)initWithJsonObject:(id)jsonObject error:(JSONModelError**)err;
+
 /**
  * Create a new model instance and initialize it with the JSON from a text parameter using the given encoding.
  * @param string JSON text data
