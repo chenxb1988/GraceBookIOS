@@ -132,6 +132,21 @@ static JSONKeyMapper* globalKeyMapper = nil;
     return objModel;
 }
 
+-(id)initWithJsonObject:(id)jsonObject error:(JSONModelError**)err
+{
+    @try {
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject
+                                                           options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        return [self initWithString:jsonString error:err];
+    } @catch (NSException *exception) {
+        
+    } @finally {
+        
+    }
+    return nil;
+}
+
 -(id)initWithString:(NSString *)string usingEncoding:(NSStringEncoding)encoding error:(JSONModelError**)err
 {
     //check for nil input
