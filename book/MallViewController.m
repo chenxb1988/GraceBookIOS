@@ -46,6 +46,8 @@
         flowlayout.minimumInteritemSpacing = 2;
         //上下间距
         flowlayout.minimumLineSpacing = 2;
+        flowlayout.headerReferenceSize = CGSizeMake(300, 200);
+        flowlayout.footerReferenceSize = CGSizeMake(400, 100);
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(2 , 2 , self.view.bounds.size.width - 4, self.view.bounds.size.height - 4) collectionViewLayout:flowlayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -54,6 +56,10 @@
         [_collectionView setBackgroundColor:[UIColor clearColor]];
         //注册cell
         [_collectionView registerClass:[GridListCollectionViewCell class] forCellWithReuseIdentifier:kCellIdentifier_CollectionViewCell];
+        
+        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:
+            UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
+        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView"];
     }
     return _collectionView;
 }
@@ -91,6 +97,37 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.dataSource.count;
+}
+
+- (UICollectionReusableView *) collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableview = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader)
+    {
+        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
+        label.text = @"header view";
+        label.textColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        [headerView addSubview:label];
+        reusableview = headerView;
+        reusableview.backgroundColor = [ColorUtil getThemeColor];
+    }
+    
+    if (kind == UICollectionElementKindSectionFooter)
+    {
+        UICollectionReusableView *footerview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
+        UILabel *label = [[UILabel alloc] initWithFrame:footerview.bounds];
+        label.text = @"footer view";
+        label.textColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        [footerview addSubview:label];
+        reusableview = footerview;
+        reusableview.backgroundColor = [ColorUtil getThemeColor];
+    }
+    
+    return reusableview;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
