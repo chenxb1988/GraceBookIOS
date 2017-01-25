@@ -13,11 +13,15 @@
 #import "GridListCollectionViewCell.h"
 #import "GridListModel.h"
 #import "NSObject+Property.m"
+#import "LGRefreshView.h"
+#import "UIViewController+PYExtension.h"
 
 @interface MallViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) LGRefreshView     *refreshView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) UICollectionReusableView *headerView, *footerView;
 @property (nonatomic, retain) UIButton *swithBtn;
 
 @end
@@ -67,7 +71,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    [self addNotification];
     // 默认列表视图
     _isGrid = NO;
     self.view.backgroundColor = [UIColor whiteColor];
@@ -77,6 +81,24 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     
     [self.view addSubview:self.collectionView];
+    __weak typeof(self) wself = self;
+    _refreshView = [LGRefreshView refreshViewWithScrollView:_collectionView
+                                             refreshHandler:^(LGRefreshView *refreshView)
+                    {
+                        if (wself)
+                        {
+                            __strong typeof(wself) self = wself;
+                            
+                            [self.collectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:0]]];
+                            
+                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(void)
+                                           {
+                                               [self.refreshView endRefreshing];
+                                           });
+                        }
+                    }];
+    _refreshView.tintColor = [ColorUtil getThemeColor];
+    _refreshView.backgroundColor = [UIColor whiteColor];
     
     _swithBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _swithBtn.frame =CGRectMake(0,0, 30, 44);
@@ -101,33 +123,31 @@
 
 - (UICollectionReusableView *) collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionReusableView *reusableview = nil;
-    
     if (kind == UICollectionElementKindSectionHeader)
     {
-        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
+        _headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        UILabel *label = [[UILabel alloc] initWithFrame:_headerView.bounds];
         label.text = @"header view";
         label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
-        [headerView addSubview:label];
-        reusableview = headerView;
-        reusableview.backgroundColor = [ColorUtil getThemeColor];
+        [_headerView addSubview:label];
+        _headerView.backgroundColor = [ColorUtil getThemeColor];
+        return _headerView;
     }
     
     if (kind == UICollectionElementKindSectionFooter)
     {
-        UICollectionReusableView *footerview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
-        UILabel *label = [[UILabel alloc] initWithFrame:footerview.bounds];
+        _footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
+        UILabel *label = [[UILabel alloc] initWithFrame:_footerView.bounds];
         label.text = @"footer view";
         label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
-        [footerview addSubview:label];
-        reusableview = footerview;
-        reusableview.backgroundColor = [ColorUtil getThemeColor];
+        [_footerView addSubview:label];
+        _footerView.backgroundColor = [ColorUtil getThemeColor];
+        return _footerView;
     }
     
-    return reusableview;
+    return nil;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -145,6 +165,13 @@
     } else {
         return CGSizeMake(ScreenWidth - 4, (ScreenWidth - 6) / 4 + 20);
     }
+}
+
+-(void)changeTheme:(UIColor *)color
+{
+    _headerView.backgroundColor = color;
+    _footerView.backgroundColor = color;
+    _refreshView.tintColor = color;
 }
 
 #pragma mark - Action

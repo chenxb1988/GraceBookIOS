@@ -41,6 +41,9 @@
 		079257EE1E2F75C7006DFE02 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257ED1E2F75C7006DFE02 /* ContactViewController.m */; };
 		079257F11E2F7604006DFE02 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F01E2F7604006DFE02 /* RecordViewController.m */; };
 		079257F41E2F7611006DFE02 /* SelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F31E2F7611006DFE02 /* SelfViewController.m */; };
+		07996AF41E38F08F00A9C96F /* LGRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07996AF31E38F08F00A9C96F /* LGRefreshView.m */; };
+		07996AFA1E38F1FF00A9C96F /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07996AF71E38F1FF00A9C96F /* DACircularProgressView.m */; };
+		07996AFB1E38F1FF00A9C96F /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07996AF91E38F1FF00A9C96F /* DALabeledCircularProgressView.m */; };
 		079993141E30A8DB007F2B74 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 079993131E30A8DB007F2B74 /* ColorUtil.m */; };
 		079993281E30C2F6007F2B74 /* ColorBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 079993271E30C2F6007F2B74 /* ColorBackButton.m */; };
 		07CF3FB51E31C516006C9606 /* ColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CF3FB41E31C516006C9606 /* ColorLabel.m */; };
@@ -151,6 +154,12 @@
 		079257F01E2F7604006DFE02 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		079257F21E2F7611006DFE02 /* SelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfViewController.h; sourceTree = "<group>"; };
 		079257F31E2F7611006DFE02 /* SelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfViewController.m; sourceTree = "<group>"; };
+		07996AF21E38F08F00A9C96F /* LGRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGRefreshView.h; sourceTree = "<group>"; };
+		07996AF31E38F08F00A9C96F /* LGRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGRefreshView.m; sourceTree = "<group>"; };
+		07996AF61E38F1FF00A9C96F /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
+		07996AF71E38F1FF00A9C96F /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		07996AF81E38F1FF00A9C96F /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
+		07996AF91E38F1FF00A9C96F /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
 		079993121E30A8DB007F2B74 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
 		079993131E30A8DB007F2B74 /* ColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
 		079993261E30C2F6007F2B74 /* ColorBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorBackButton.h; sourceTree = "<group>"; };
@@ -339,6 +348,26 @@
 			name = viewcontroller;
 			sourceTree = "<group>";
 		};
+		07996AF11E38F08F00A9C96F /* LGRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				07996AF21E38F08F00A9C96F /* LGRefreshView.h */,
+				07996AF31E38F08F00A9C96F /* LGRefreshView.m */,
+			);
+			path = LGRefreshView;
+			sourceTree = "<group>";
+		};
+		07996AF51E38F1FF00A9C96F /* DACircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				07996AF61E38F1FF00A9C96F /* DACircularProgressView.h */,
+				07996AF71E38F1FF00A9C96F /* DACircularProgressView.m */,
+				07996AF81E38F1FF00A9C96F /* DALabeledCircularProgressView.h */,
+				07996AF91E38F1FF00A9C96F /* DALabeledCircularProgressView.m */,
+			);
+			path = DACircularProgress;
+			sourceTree = "<group>";
+		};
 		079993251E30C1F7007F2B74 /* extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +414,8 @@
 		1914F05F1E2CDF2E004668EF /* book */ = {
 			isa = PBXGroup;
 			children = (
+				07996AF51E38F1FF00A9C96F /* DACircularProgress */,
+				07996AF11E38F08F00A9C96F /* LGRefreshView */,
 				073764761E378E490085763D /* SDWebImage */,
 				07515C171E33AF4A006ECCDA /* JSONModel */,
 				07515BE41E33A390006ECCDA /* model */,
@@ -642,10 +673,12 @@
 				198554821E2DFA690039AE51 /* PYTabBarController.m in Sources */,
 				073764961E378E490085763D /* SDWebImageCompat.m in Sources */,
 				073764AD1E378F1E0085763D /* NSObject+Property.m in Sources */,
+				07996AFA1E38F1FF00A9C96F /* DACircularProgressView.m in Sources */,
 				07515C321E33AF4A006ECCDA /* JSONAPI.m in Sources */,
 				0737649B1E378E490085763D /* SDWebImagePrefetcher.m in Sources */,
 				073764991E378E490085763D /* SDWebImageDownloaderOperation.m in Sources */,
 				1914F0651E2CDF2E004668EF /* AppDelegate.m in Sources */,
+				07996AFB1E38F1FF00A9C96F /* DALabeledCircularProgressView.m in Sources */,
 				073764981E378E490085763D /* SDWebImageDownloader.m in Sources */,
 				073764941E378E490085763D /* NSData+ImageContentType.m in Sources */,
 				079257EE1E2F75C7006DFE02 /* ContactViewController.m in Sources */,
@@ -657,6 +690,7 @@
 				0737649A1E378E490085763D /* SDWebImageManager.m in Sources */,
 				079256CA1E33308C001109E8 /* AFNetworkUtil.m in Sources */,
 				1914F09C1E2CE43E004668EF /* Commons.m in Sources */,
+				07996AF41E38F08F00A9C96F /* LGRefreshView.m in Sources */,
 				079257F11E2F7604006DFE02 /* RecordViewController.m in Sources */,
 				07515C311E33AF4A006ECCDA /* JSONModelError.m in Sources */,
 				07515C301E33AF4A006ECCDA /* JSONModelClassProperty.m in Sources */,
