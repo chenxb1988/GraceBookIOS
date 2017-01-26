@@ -278,5 +278,6 @@
 -(void)changeTheme:(UIColor *)color
 {
     [self setTitleColor:[ColorUtil getThemeColor] forState:UIControlStateSelected];
+    [self setNeedsDisplay];
 }
 @end
