@@ -1,12 +1,12 @@
 //
-//  MallViewController.m
+//  ContactViewController.m
 //  book
 //
-//  Created by chenxb on 17/1/26.
+//  Created by chenxb on 17/1/18.
 //  Copyright © 2017年 grace. All rights reserved.
 //
 
-#import "MallViewController.h"
+#import "HomeContactViewController.h"
 #import "Commons.h"
 #import "ColorLabel.h"
 #import "ColorUtil.h"
@@ -16,7 +16,7 @@
 #import "LGRefreshView.h"
 #import "UIViewController+PYExtension.h"
 
-@interface MallViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface HomeContactViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) LGRefreshView     *refreshView;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation MallViewController
+@implementation HomeContactViewController
 {
     BOOL _isGrid;
 }

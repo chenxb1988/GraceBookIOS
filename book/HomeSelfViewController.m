@@ -6,7 +6,7 @@
 //  Copyright © 2017年 grace. All rights reserved.
 //
 
-#import "SelfViewController.h"
+#import "HomeSelfViewController.h"
 #import "PYTempCollectionViewController.h"
 #import "Commons.h"
 #import "ColorUtil.h"
@@ -15,11 +15,11 @@
 #import "AFNetworkUtil.h"
 #import "Preload.h"
 
-@interface SelfViewController ()
+@interface HomeSelfViewController ()
 
 @end
 
-@implementation SelfViewController
+@implementation HomeSelfViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     ColorLabel *text = [[ColorLabel alloc]init];
     text.textColor = [ColorUtil getThemeColor];
-    [text setText:@"SelfViewController"];
+    [text setText:@"HomeSelfViewController"];
     text.frame= CGRectMake(50, 100, 300, 50);
     [self.view addSubview:text];
     

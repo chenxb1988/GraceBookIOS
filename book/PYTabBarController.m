@@ -8,11 +8,11 @@
 
 #import "PYTabBarController.h"
 #import "PYTempCollectionViewController.h"
-#import "HomeViewController.h"
-#import "MallViewController.h"
-#import "RecordViewController.h"
-#import "ContactViewController.h"
-#import "SelfViewController.h"
+#import "HomeMainViewController.h"
+#import "HomeMallViewController.h"
+#import "HomeRecordViewController.h"
+#import "HomeContactViewController.h"
+#import "HomeSelfViewController.h"
 #import "Commons.h"
 #import "UIViewController+PYExtension.h"
 #import "ColorUtil.h"
@@ -28,11 +28,11 @@
     [super viewDidLoad];
     
     // 首页
-    _homeViewController = [[HomeViewController alloc] init];
-    _mallViewController = [[MallViewController alloc] init];
-    _recordViewController = [[RecordViewController alloc] init];
-    _contactViewController = [[ContactViewController alloc] init];
-    _selfViewController = [[SelfViewController alloc] init];
+    _homeViewController = [[HomeMainViewController alloc] init];
+    _mallViewController = [[HomeMallViewController alloc] init];
+    _recordViewController = [[HomeRecordViewController alloc] init];
+    _contactViewController = [[HomeContactViewController alloc] init];
+    _selfViewController = [[HomeSelfViewController alloc] init];
     [self addChildViewController:_mallViewController image:@"tab_home_nor" seletedImage:@"tab_home_press" title:@"Home"];
     [self addChildViewController:_recordViewController image:@"tab_classify_nor"  seletedImage:@"tab_classify_press"  title:@"Classify"];
     [self addChildViewController:_homeViewController image:@"tab_publish_nor" seletedImage:@"tab_publish_nor" title:nil];

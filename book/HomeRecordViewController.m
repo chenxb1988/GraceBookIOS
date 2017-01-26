@@ -6,16 +6,16 @@
 //  Copyright © 2017年 grace. All rights reserved.
 //
 
-#import "RecordViewController.h"
+#import "HomeRecordViewController.h"
 #import "Commons.h"
 #import "ColorLabel.h"
 #import "ColorUtil.h"
 
-@interface RecordViewController ()
+@interface HomeRecordViewController ()
 
 @end
 
-@implementation RecordViewController
+@implementation HomeRecordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +23,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     ColorLabel *text = [[ColorLabel alloc]init];
     text.textColor = [ColorUtil getThemeColor];
-    [text setText:@"RecordViewController"];
+    [text setText:@"HomeRecordViewController"];
     text.frame= CGRectMake(50, 100, 300, 50);
     [self.view addSubview:text];
 

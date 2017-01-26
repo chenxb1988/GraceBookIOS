@@ -6,16 +6,16 @@
 //  Copyright © 2017年 grace. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "HomeMainViewController.h"
 #import "Commons.h"
 #import "ColorLabel.h"
 #import "ColorUtil.h"
 
-@interface HomeViewController ()
+@interface HomeMainViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation HomeMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +23,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     ColorLabel *text = [[ColorLabel alloc]init];
     text.textColor = [ColorUtil getThemeColor];
-    [text setText:@"HomeViewController"];
+    [text setText:@"HomeMainViewController"];
     text.frame= CGRectMake(50, 100, 300, 50);
     [self.view addSubview:text];
 }

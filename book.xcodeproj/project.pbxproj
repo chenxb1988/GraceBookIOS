@@ -36,11 +36,13 @@
 		07515C361E33AF4A006ECCDA /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07515C2C1E33AF4A006ECCDA /* JSONValueTransformer.m */; };
 		07515C391E33AF78006ECCDA /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07515C381E33AF78006ECCDA /* BaseModel.m */; };
 		079256CA1E33308C001109E8 /* AFNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 079256C91E33308C001109E8 /* AFNetworkUtil.m */; };
-		079257E81E2F75A5006DFE02 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257E71E2F75A5006DFE02 /* HomeViewController.m */; };
-		079257EB1E2F75B9006DFE02 /* MallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257EA1E2F75B9006DFE02 /* MallViewController.m */; };
-		079257EE1E2F75C7006DFE02 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257ED1E2F75C7006DFE02 /* ContactViewController.m */; };
-		079257F11E2F7604006DFE02 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F01E2F7604006DFE02 /* RecordViewController.m */; };
-		079257F41E2F7611006DFE02 /* SelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F31E2F7611006DFE02 /* SelfViewController.m */; };
+		079257E81E2F75A5006DFE02 /* HomeMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257E71E2F75A5006DFE02 /* HomeMainViewController.m */; };
+		079257EB1E2F75B9006DFE02 /* HomeMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257EA1E2F75B9006DFE02 /* HomeMallViewController.m */; };
+		079257EE1E2F75C7006DFE02 /* HomeContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257ED1E2F75C7006DFE02 /* HomeContactViewController.m */; };
+		079257F11E2F7604006DFE02 /* HomeRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F01E2F7604006DFE02 /* HomeRecordViewController.m */; };
+		079257F41E2F7611006DFE02 /* HomeSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079257F31E2F7611006DFE02 /* HomeSelfViewController.m */; };
+		079555F41E399CEB004E9026 /* LSYViewPagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 079555F31E399CEB004E9026 /* LSYViewPagerVC.m */; };
+		079555F71E399D9F004E9026 /* MallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079555F61E399D9F004E9026 /* MallViewController.m */; };
 		07996AF41E38F08F00A9C96F /* LGRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07996AF31E38F08F00A9C96F /* LGRefreshView.m */; };
 		07996AFA1E38F1FF00A9C96F /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07996AF71E38F1FF00A9C96F /* DACircularProgressView.m */; };
 		07996AFB1E38F1FF00A9C96F /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07996AF91E38F1FF00A9C96F /* DALabeledCircularProgressView.m */; };
@@ -144,16 +146,20 @@
 		07515C381E33AF78006ECCDA /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		079256C81E33308C001109E8 /* AFNetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkUtil.h; sourceTree = "<group>"; };
 		079256C91E33308C001109E8 /* AFNetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkUtil.m; sourceTree = "<group>"; };
-		079257E61E2F75A5006DFE02 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		079257E71E2F75A5006DFE02 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		079257E91E2F75B9006DFE02 /* MallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallViewController.h; sourceTree = "<group>"; };
-		079257EA1E2F75B9006DFE02 /* MallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallViewController.m; sourceTree = "<group>"; };
-		079257EC1E2F75C7006DFE02 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
-		079257ED1E2F75C7006DFE02 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
-		079257EF1E2F7604006DFE02 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
-		079257F01E2F7604006DFE02 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
-		079257F21E2F7611006DFE02 /* SelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfViewController.h; sourceTree = "<group>"; };
-		079257F31E2F7611006DFE02 /* SelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfViewController.m; sourceTree = "<group>"; };
+		079257E61E2F75A5006DFE02 /* HomeMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMainViewController.h; sourceTree = "<group>"; };
+		079257E71E2F75A5006DFE02 /* HomeMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMainViewController.m; sourceTree = "<group>"; };
+		079257E91E2F75B9006DFE02 /* HomeMallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMallViewController.h; sourceTree = "<group>"; };
+		079257EA1E2F75B9006DFE02 /* HomeMallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMallViewController.m; sourceTree = "<group>"; };
+		079257EC1E2F75C7006DFE02 /* HomeContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeContactViewController.h; sourceTree = "<group>"; };
+		079257ED1E2F75C7006DFE02 /* HomeContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeContactViewController.m; sourceTree = "<group>"; };
+		079257EF1E2F7604006DFE02 /* HomeRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeRecordViewController.h; sourceTree = "<group>"; };
+		079257F01E2F7604006DFE02 /* HomeRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeRecordViewController.m; sourceTree = "<group>"; };
+		079257F21E2F7611006DFE02 /* HomeSelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSelfViewController.h; sourceTree = "<group>"; };
+		079257F31E2F7611006DFE02 /* HomeSelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSelfViewController.m; sourceTree = "<group>"; };
+		079555F21E399CEB004E9026 /* LSYViewPagerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSYViewPagerVC.h; sourceTree = "<group>"; };
+		079555F31E399CEB004E9026 /* LSYViewPagerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSYViewPagerVC.m; sourceTree = "<group>"; };
+		079555F51E399D9F004E9026 /* MallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallViewController.h; sourceTree = "<group>"; };
+		079555F61E399D9F004E9026 /* MallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallViewController.m; sourceTree = "<group>"; };
 		07996AF21E38F08F00A9C96F /* LGRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGRefreshView.h; sourceTree = "<group>"; };
 		07996AF31E38F08F00A9C96F /* LGRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGRefreshView.m; sourceTree = "<group>"; };
 		07996AF61E38F1FF00A9C96F /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
@@ -334,18 +340,29 @@
 		079257E51E2F757A006DFE02 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				079257E61E2F75A5006DFE02 /* HomeViewController.h */,
-				079257E71E2F75A5006DFE02 /* HomeViewController.m */,
-				079257E91E2F75B9006DFE02 /* MallViewController.h */,
-				079257EA1E2F75B9006DFE02 /* MallViewController.m */,
-				079257EC1E2F75C7006DFE02 /* ContactViewController.h */,
-				079257ED1E2F75C7006DFE02 /* ContactViewController.m */,
-				079257EF1E2F7604006DFE02 /* RecordViewController.h */,
-				079257F01E2F7604006DFE02 /* RecordViewController.m */,
-				079257F21E2F7611006DFE02 /* SelfViewController.h */,
-				079257F31E2F7611006DFE02 /* SelfViewController.m */,
+				079257E61E2F75A5006DFE02 /* HomeMainViewController.h */,
+				079257E71E2F75A5006DFE02 /* HomeMainViewController.m */,
+				079257E91E2F75B9006DFE02 /* HomeMallViewController.h */,
+				079257EA1E2F75B9006DFE02 /* HomeMallViewController.m */,
+				079257EC1E2F75C7006DFE02 /* HomeContactViewController.h */,
+				079257ED1E2F75C7006DFE02 /* HomeContactViewController.m */,
+				079257EF1E2F7604006DFE02 /* HomeRecordViewController.h */,
+				079257F01E2F7604006DFE02 /* HomeRecordViewController.m */,
+				079257F21E2F7611006DFE02 /* HomeSelfViewController.h */,
+				079257F31E2F7611006DFE02 /* HomeSelfViewController.m */,
+				079555F51E399D9F004E9026 /* MallViewController.h */,
+				079555F61E399D9F004E9026 /* MallViewController.m */,
 			);
 			name = viewcontroller;
+			sourceTree = "<group>";
+		};
+		079555EB1E398DD4004E9026 /* viewpager */ = {
+			isa = PBXGroup;
+			children = (
+				079555F21E399CEB004E9026 /* LSYViewPagerVC.h */,
+				079555F31E399CEB004E9026 /* LSYViewPagerVC.m */,
+			);
+			name = viewpager;
 			sourceTree = "<group>";
 		};
 		07996AF11E38F08F00A9C96F /* LGRefreshView */ = {
@@ -418,9 +435,10 @@
 				07996AF11E38F08F00A9C96F /* LGRefreshView */,
 				073764761E378E490085763D /* SDWebImage */,
 				07515C171E33AF4A006ECCDA /* JSONModel */,
-				07515BE41E33A390006ECCDA /* model */,
 				073764A71E378EBC0085763D /* cell */,
+				07515BE41E33A390006ECCDA /* model */,
 				079993251E30C1F7007F2B74 /* extension */,
+				079555EB1E398DD4004E9026 /* viewpager */,
 				079257E51E2F757A006DFE02 /* viewcontroller */,
 				198554711E2DF5EF0039AE51 /* theme */,
 				1914F09D1E2CE621004668EF /* asset */,
@@ -663,7 +681,7 @@
 				073764A11E378E490085763D /* UIView+WebCacheOperation.m in Sources */,
 				0737649D1E378E490085763D /* UIImage+GIF.m in Sources */,
 				07515C2F1E33AF4A006ECCDA /* JSONModel.m in Sources */,
-				079257EB1E2F75B9006DFE02 /* MallViewController.m in Sources */,
+				079257EB1E2F75B9006DFE02 /* HomeMallViewController.m in Sources */,
 				198554801E2DFA690039AE51 /* PYNavigationController.m in Sources */,
 				1914F06E1E2CDF2E004668EF /* book.xcdatamodeld in Sources */,
 				07515BE81E33A3BC006ECCDA /* Preload.m in Sources */,
@@ -681,23 +699,25 @@
 				07996AFB1E38F1FF00A9C96F /* DALabeledCircularProgressView.m in Sources */,
 				073764981E378E490085763D /* SDWebImageDownloader.m in Sources */,
 				073764941E378E490085763D /* NSData+ImageContentType.m in Sources */,
-				079257EE1E2F75C7006DFE02 /* ContactViewController.m in Sources */,
+				079257EE1E2F75C7006DFE02 /* HomeContactViewController.m in Sources */,
 				07515C361E33AF4A006ECCDA /* JSONValueTransformer.m in Sources */,
 				079993141E30A8DB007F2B74 /* ColorUtil.m in Sources */,
 				073764971E378E490085763D /* SDWebImageDecoder.m in Sources */,
 				07515C351E33AF4A006ECCDA /* JSONKeyMapper.m in Sources */,
-				079257F41E2F7611006DFE02 /* SelfViewController.m in Sources */,
+				079257F41E2F7611006DFE02 /* HomeSelfViewController.m in Sources */,
 				0737649A1E378E490085763D /* SDWebImageManager.m in Sources */,
 				079256CA1E33308C001109E8 /* AFNetworkUtil.m in Sources */,
 				1914F09C1E2CE43E004668EF /* Commons.m in Sources */,
 				07996AF41E38F08F00A9C96F /* LGRefreshView.m in Sources */,
-				079257F11E2F7604006DFE02 /* RecordViewController.m in Sources */,
+				079257F11E2F7604006DFE02 /* HomeRecordViewController.m in Sources */,
+				079555F41E399CEB004E9026 /* LSYViewPagerVC.m in Sources */,
 				07515C311E33AF4A006ECCDA /* JSONModelError.m in Sources */,
 				07515C301E33AF4A006ECCDA /* JSONModelClassProperty.m in Sources */,
 				198554831E2DFA690039AE51 /* PYTempCollectionViewController.m in Sources */,
 				079993281E30C2F6007F2B74 /* ColorBackButton.m in Sources */,
 				07515C391E33AF78006ECCDA /* BaseModel.m in Sources */,
 				073764A01E378E490085763D /* UIImageView+WebCache.m in Sources */,
+				079555F71E399D9F004E9026 /* MallViewController.m in Sources */,
 				0737649E1E378E490085763D /* UIImage+MultiFormat.m in Sources */,
 				0737649C1E378E490085763D /* UIButton+WebCache.m in Sources */,
 				07515C331E33AF4A006ECCDA /* JSONHTTPClient.m in Sources */,
@@ -708,7 +728,7 @@
 				0737649F1E378E490085763D /* UIImageView+HighlightedWebCache.m in Sources */,
 				073764A41E378E710085763D /* GridListModel.m in Sources */,
 				1914F0621E2CDF2E004668EF /* main.m in Sources */,
-				079257E81E2F75A5006DFE02 /* HomeViewController.m in Sources */,
+				079257E81E2F75A5006DFE02 /* HomeMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
